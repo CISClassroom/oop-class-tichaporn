@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class main {
 
-    public static void Main(String[] args) {
+    public void Main(String[] args) {
         //create Student object
         Student tichaporn = new Student();
 
@@ -14,7 +14,7 @@ public class main {
         tichaporn.major = "CIS";
 
         //get data from Object
-        System.out.println("1. " +tichaporn.name + " " + tichaporn.major)
+        System.out.println("1. " + tichaporn.name + " " + tichaporn.major);
 
         //add student to array
         //array index
@@ -24,11 +24,12 @@ public class main {
 
         find_CIS_Student(oopStudent);
     }
-    public void find_CIS_Student(Student[] students){
-        for(int i=0;i<students.length;i++){
+
+    public void find_CIS_Student(Student[] students) {
+        for (int i = 0; i < students.length; i++) {
             //check student.major is "CIS"
-            if(students[i].major=="CIS"){
-                System.out.println(i+1+". "+students[i].name);
+            if (students[i].major == "CIS") {
+                System.out.println(i + 1 + ". " + students[i].name);
             }
         }
     }
